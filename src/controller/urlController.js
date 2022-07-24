@@ -70,6 +70,7 @@ const shortUrl = async function (req, res) {
             "longUrl": result.longUrl,
             "shortUrl": result.shortUrl
         }
+        //await SETEX_ASYNC(`${longUrl}`,600, JSON.stringify(data))
 
         res.status(201).send({ status: true, msg: "shortUrl is created", data: data })
     } catch (err) {
